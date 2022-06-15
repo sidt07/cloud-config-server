@@ -1,0 +1,20 @@
+eureka:
+  client:
+     serviceUrl:
+        defaultZone : http://localhost:8761/eureka
+     instance:
+        preferIpAddress : true
+     eureka-server-port : 8761
+     register-with-eureka : true
+     fetch-registry : true
+     
+     
+microservice:
+  payment-sevice:
+    endpoints:
+      endpoint:
+        uri:http://localhost:9191/payment/doPayment
+  order-sevice:
+    endpoints:
+      endpoint:
+        uri:http://localhost:9192/order/bookOrder
